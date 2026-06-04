@@ -1,20 +1,23 @@
 """A simple gardening advice program with improvement tasks."""
 
 
+def get_season_advice(season):
+    """Return gardening advice based on the selected season."""
+    if season == "summer":
+        return "Water plants early in the morning to reduce evaporation."
+    if season == "autumn":
+        return "Collect fallen leaves and add them to compost."
+    if season == "winter":
+        return "Protect sensitive plants from frost."
+    if season == "spring":
+        return "Prepare beds and begin planting new seedlings."
+    return "Please enter a valid season."
+
+
 month = input("Enter the current month: ").strip().lower()
 season = input("Enter the current season: ").strip().lower()
 
-# TODO: Refactor the repeated seasonal conditions into a reusable function.
-if season == "summer":
-    print("Water plants early in the morning to reduce evaporation.")
-elif season == "autumn":
-    print("Collect fallen leaves and add them to compost.")
-elif season == "winter":
-    print("Protect sensitive plants from frost.")
-elif season == "spring":
-    print("Prepare beds and begin planting new seedlings.")
-else:
-    print("Please enter a valid season.")
+print(get_season_advice(season))
 
 # TODO: Create a reusable function for monthly planting advice.
 if month == "january":
